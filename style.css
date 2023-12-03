@@ -16,11 +16,12 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
 
 .logo img {
-  width: 200px; 
+  height: 200px;
+  width: 200px;
+  margin-left: 50px;
 }
 
 .navbar ul {
@@ -35,13 +36,25 @@ body{
 .navbar a {
   text-decoration: none;
   color: #000000;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
-
+.nav__link::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: var(--white-color);
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  transition: width .3s;
+}
+.nav__link:hover::after{
+  width: 25%;
+}
 .navbar a:hover {
   color: #fcfbf9;
-  border-bottom: 2px solid #D09F4D;
+  border-bottom: 2px solid #fcfbf9
 }
 
 /* Photo Slider Styles */
@@ -61,6 +74,17 @@ body{
   position: relative;
 }
 
+.slide::after{
+  content: '';
+  background: rgba(21, 21, 21, .3);
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 .slide img {
   width: 100%;
   height: 700px;
@@ -73,6 +97,7 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 3;
 }
 
 .slogan {
@@ -107,6 +132,7 @@ body{
 /* BENEFITS */
 .benefits{
   text-align: center;
+  margin-bottom: 150px;
 }
 .benefits-cards{
   display: flex;
@@ -121,13 +147,13 @@ body{
 }
 /* SERVICES */
 .services{
-  margin-top: 40px;
   text-align: center;
+  margin-bottom: 150px;
 }
 .title{
   font-size: 64px;
   font-weight: 300;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .service__cards{
   display: flex;
@@ -205,8 +231,9 @@ body{
 
 /* CLIENTS FEEDBACK */
 .feedback {
-  margin: 50px auto;
+  text-align: center;
   align-items: center;
+  margin-bottom: 150px;
 }
 .clients-slogan {
   margin: 30px auto;
@@ -276,10 +303,9 @@ body{
   list-style: none;
 }
 
-
 /* GOT BROKEN */
 .got-broken{
-  margin-top: 60px;
+  margin-bottom: 150px;
   text-align: center;
 }
 .subtitle{
@@ -299,7 +325,6 @@ body{
 
 /* SUPERIORS */
 .superiors{
-  margin-top: 60px;
   text-align: center;
 }
 .our-superiors{
@@ -336,7 +361,7 @@ body{
 
 /* CONTACT US */
 .contact-us{
-  margin-top: 60px;
+  margin-top: 100px;
   padding-bottom: 60px;
   text-align: center;
 }
@@ -377,7 +402,9 @@ body{
 }
 
 /* BOOKING PAGE */
-
+.book-chariot{
+  text-align: center;
+}
 /* Center the form */
 /* .form-container {
   display: flex;
@@ -393,7 +420,7 @@ body{
   grid-template-rows: auto auto auto;
   grid-gap: 10px;
  }
- 
+
  .contact__group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -408,11 +435,11 @@ body{
   font-size: 20px;
   color:#000000;
  }
- 
+
  .contact__group:nth-child(2) {
   grid-column: span 2;
  }
- 
+
  .contact__group:nth-child(3) {
   grid-template-columns: repeat(3, 1fr);
  }
