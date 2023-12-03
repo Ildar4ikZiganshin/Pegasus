@@ -13,8 +13,9 @@
   <title>Pegasus - Fast and Elegant</title>
 </head>
 <body>
-
 <header class="header">
+
+  <!-- NAVIGATION -->
   <div class="logo">
     <a href="index.html">
       <img src="img/logo.png" alt="Pegasus Logo">
@@ -26,11 +27,12 @@
       <li><a class="nav__link" href="about.html">About</a></li>
       <li><a class="nav__link" href="#services">Services</a></li>
       <li><a class="nav__link" href="#reviews">Reviews</a></li>
-      <li><a class="nav__link" href="order-form.html">Contact Us</a></li>
+      <li><a class="nav__link" href="#contact-us">Contact Us</a></li>
     </ul>
   </nav>
 </header>
 
+<!-- MAIN SLIDER WITH SLOGAN -->
 <div class="photo-slider">
   <div class="slides-container carousel-effect">
     <div class="slide">
@@ -148,22 +150,39 @@
       <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
       <ul data-slides>
         <li class="feedback-slide" data-active>
-          <img src="img/Customer-1.jpeg" alt="" class="feedback-image">
-          <p>Magnificent service! The horse taxi exuded charm and grace.
-            My journey was nothing short of a leisurely ride through time.
-            I tip my hat to the courteous driver and his noble steed.</p>
+          <div class="feedback-slide-content">
+            <div class="customer-content">
+              <img src="img/Customer-1.jpeg" alt="" class="feedback-image">
+              <figcaption class="feedback-content-name">Eleanor Worthington</figcaption>
+            </div>
+            <div class="feedback-text">
+              <p>Magnificent service! The horse taxi exuded charm and grace.
+                My journey was nothing short of a leisurely ride through time.
+                I tip my hat to the courteous driver and his noble steed.</p>
+            </div>
+          </div>
         </li>
         <li class="feedback-slide">
-          <img src="img/Customer-2.jpeg" alt="" class="feedback-image">
-          <p>Magnificent service! The horse taxi exuded charm and grace.
-            My journey was nothing short of a leisurely ride through time.
-            I tip my hat to the courteous driver and his noble steed.</p>
+          <div class="feedback-slide-content">
+            <div class="customer-content">
+              <img src="img/Customer-2.jpeg" alt="" class="feedback-image">
+              <figcaption class="feedback-content-name">Edmund Thornton</figcaption>
+            </div>
+            <div class="feedback-text">
+              <p>I recently took a horse taxi and found it to be a splendid experience. The clip-clop of hooves on cobblestone streets, the carriage draped in regal attire - it felt like a scene from a bygone era. An equine journey worth savoring.</p>
+            </div>
+          </div>
         </li>
         <li class="feedback-slide">
-          <img src="img/Customer-3.jpeg" alt="" class="feedback-image">
-          <p>Magnificent service! The horse taxi exuded charm and grace.
-            My journey was nothing short of a leisurely ride through time.
-            I tip my hat to the courteous driver and his noble steed.</p>
+          <div class="feedback-slide-content">
+            <div class="customer-content">
+              <img src="img/Customer-3.jpeg" alt="" class="feedback-image">
+              <figcaption class="feedback-content-name">Benedict Blackwood</figcaption>
+            </div>
+            <div class="feedback-text">
+              <p>My recent journey on the horse taxi with Pegasus was nothing short of regal. The elegant carriage, pulled by a majestic steed, transported me with a grace and sophistication rarely found in modern transportation. A truly splendid experience.</p>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
@@ -201,7 +220,7 @@
   </section>
 
   <!-- CONTACT US -->
-  <section class="contact-us">
+  <section class="contact-us" id="contact-us">
     <h1 class="title">Contact Us</h1>
     <h2 class="subtitle">You can contact us at any time. We have 24/7 customer support.</h2>
     <p class="phone">Call: +7(800)555-35-35</p>
