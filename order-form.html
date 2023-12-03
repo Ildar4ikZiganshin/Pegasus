@@ -3,40 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/logo.jpeg" type="image/logo">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One:wght@400;700" rel="stylesheet">
   <title>Pegasus - Fast and Elegant</title>
 </head>
 <body>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/logo.png" alt="Pegasus Logo">
+      </a>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="order-form.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="form-container">
   <form action="" class="contact__form" id="contact-form">
+
+    <h3>Book a Chariot</h3>
 
     <div class="contact__group">
       <div class="contact__box">
-        <input type="text" name="user_fname" class="contact__input" id="fname" required placeholder="First Name">
         <label for="fname" class="contact__label">First Name</label>
+        <input type="text" name="user_fname" class="contact__input" id="fname" required placeholder="First Name">
       </div>
-
+    
       <div class="contact__box">
-        <input type="text" name="user_lname" class="contact__input" id="lname" required placeholder="Last Name">
         <label for="lname" class="contact__label">Last Name</label>
+        <input type="text" name="user_lname" class="contact__input" id="lname" required placeholder="Last Name">
       </div>
-
+    </div>
+    
+    <div class="contact__group">
       <div class="contact__box">
-        <input type="date" name="user_date" class="contact__input" id="date" required placeholder="Date Of Order">
-        <label for="date" class="contact__label">Date Of Order:</label>
-      </div>
-
-      <div class="contact__box">
-        <input type="time" name="user_time" class="contact__input" id="time" required placeholder="Time Of Order">
-        <label for="time" class="contact__label">Till what time you wonna get your carriage:</label>
-      </div>
-
-      <div class="contact__box">
+        <label for="pickup" class="contact__label">From:</label>
         <input type="text" name="user_pickup" class="contact__input" id="pickup" required placeholder="Pickup Location">
-        <label for="pickup" class="contact__label">Choose your pickup Location:</label>
       </div>
-
+    
       <div class="contact__box">
+        <label for="destination" class="contact__label">Where:</label>
         <input type="text" name="destination" class="contact__input" id="destination" required placeholder="Destination">
-        <label for="destination" class="contact__label">Choose your Destination:</label>
+      </div>
+    </div>
+    
+    <div class="contact__group">
+      <div class="contact__box">
+        <label for="time" class="contact__label">Time:</label>
+        <input type="time" name="user_time" class="contact__input" id="time" required placeholder="Time Of Order">
+      </div>
+    
+      <div class="contact__box">
+        <label for="date" class="contact__label">Date:</label>
+        <input type="date" name="user_date" class="contact__input" id="date" required placeholder="Date Of Order">
+      </div>
+    
+      <div class="tariff-option">
+        <label for="tariff">Tariff:</label>
+        <select name="tariff" id="tariff" required>
+          <option value="economy">Economy</option>
+          <option value="comfort">Comfort</option>
+          <option value="royal">Royal</option>
+        </select>
       </div>
     </div>
     <p class="contact__message" id="contact-message"></p>
@@ -45,5 +82,6 @@
       <i class="ri-send-plane-line"></i> Book A Carriage
     </button>
   </form>
+  </div>
 </body>
 </html>

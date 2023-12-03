@@ -11,6 +11,99 @@ body{
   background: #C0A276;
 }
 
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo img {
+  width: 200px; 
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #fcfbf9;
+  border-bottom: 2px solid #D09F4D;
+}
+
+/* Photo Slider Styles */
+.photo-slider {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.slides-container {
+  display: flex;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.slogan {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: rgba(192, 162, 118, .85);
+  -webkit-text-stroke-width: .1px;
+  -webkit-text-stroke-color: #000000;
+}
+
+.button {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  padding: 10px 10px;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: #86642C;
+  cursor: pointer;
+  transition: color 0.3s, border 0.3s, background-color 0.3s;
+}
+
+.button:hover {
+  color: #fcfbf9;
+  background-color: #D09F4D;
+}
+
+.carousel-effect {
+  transition: transform 2s ease-in-out; /* Adjust the duration as needed */
+}
+
 /* BENEFITS */
 .benefits{
   text-align: center;
@@ -105,20 +198,84 @@ body{
   margin-bottom: 20px;
 }
 
-.button{
-  text-decoration: none;
-  color: #000;
-  font-size: 20px;
-  padding: 10px 10px;
-  border: 1px solid black;
-  border-radius: 50px;
-  background-color: #D09F4D;
-  cursor: pointer;
-}
 
 .service__card:hover .tariff-description{
   bottom: 0;
 }
+
+/* CLIENTS FEEDBACK */
+.feedback {
+  margin: 50px auto;
+  align-items: center;
+}
+.clients-slogan {
+  margin: 30px auto;
+  font-size: 40px;
+}
+.feedback-carousel {
+  margin: auto;
+  max-width: 1000px;
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  position: relative;
+  align-items: center;
+  background-color: rgba(134, 100, 44, .6);
+}
+
+.feedback-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 400ms opacity ease-in-out;
+}
+
+.feedback-slide[data-active] {
+  opacity: 1;
+}
+
+.feedback-image {
+  display: block;
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 20%;
+}
+
+.carousel-button {
+  position: absolute;
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(black, black, black, .5);
+  cursor: pointer;
+  border-radius: 10rem;
+  border: 1px solid black;
+  padding: 0 .3rem;
+  background-color: rgba(255, 255, 255, .1);
+}
+.carousel-button:hover,
+.carousel-button:focus {
+  color: black;
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+.carousel-button.next {
+  right: 1rem;
+}
+.feedback-carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 
 /* GOT BROKEN */
 .got-broken{
@@ -165,6 +322,7 @@ body{
   height: 450px;
   border-radius: 20px;
   margin-bottom: 10px;
+  object-fit: cover;
 }
 .superior-name{
   margin-bottom: 40px;
@@ -217,3 +375,44 @@ body{
   font-size: 20px;
   text-align: left;
 }
+
+/* BOOKING PAGE */
+
+/* Center the form */
+/* .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+/* Separate rows in the form */
+.contact__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-gap: 10px;
+ }
+ 
+ .contact__group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+ }
+
+ .contact__box {
+  border: 2px solid #86642C;
+  border-radius: 10px;
+ }
+ .contact__box input, textarea {
+  font-size: 20px;
+  color:#000000;
+ }
+ 
+ .contact__group:nth-child(2) {
+  grid-column: span 2;
+ }
+ 
+ .contact__group:nth-child(3) {
+  grid-template-columns: repeat(3, 1fr);
+ }
