@@ -508,4 +508,10 @@ body{
   font-family: 'Yeseva One', serif;
   margin-bottom: 10%
  }
+ footer {
+  background-color: rgba(134, 100, 44, .6);
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+ }
 
